@@ -1,10 +1,15 @@
+import os
+from dotenv import load_dotenv
 import requests
 import feedparser
 import time
 
-TELEGRAM_BOT_TOKEN = '7917069062:AAErF4qHXFttEb11v_MolvOkHWWvYJuzYRY'
-TELEGRAM_CHAT_ID = '1330184220'
-SUBREDDIT = 'DoneDirtCheap'
+load_dotenv()
+
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+SUBREDDIT = os.getenv("SUBREDDIT")
+
 
 # Track posted links
 seen_posts = set()
