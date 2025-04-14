@@ -1,5 +1,5 @@
 import os
-from dotenv import load_dotenv
+from .env import load_dotenv
 import requests
 import feedparser
 import time
